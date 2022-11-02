@@ -6,7 +6,7 @@ import argparse
 import shutil
 import os
 
-parser = argparse.ArgumentParser(prog = 'copyhierarchy', 
+parser = argparse.ArgumentParser(prog = 'copyhierarchy',
                                 description = 'Duplicate a directory hierarchy')
 
 parser.add_argument('-s', '--sourcedir',
@@ -24,9 +24,9 @@ parser.add_argument('-d', '--destdir',
 
 args = parser.parse_args()
 
-def ignore_files(dir, files):
+def ignore_files(dir_name, files):
     """function to test if there are any files the directory"""
-    return [f for f in files if os.path.isfile(os.path.join(dir, f))]
+    return [f for f in files if os.path.isfile(os.path.join(dir_name, f))]
 
 if not os.path.exists(args.srcdir):
     print(f'The source path "{args.srcdir}" does not exist.')
