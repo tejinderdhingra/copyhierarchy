@@ -6,6 +6,7 @@ usage:
 `
 python3 copyhierarchy.py [-h] -s SRCDIR -d DESTDIR
 `
+
 The cli tool validates the inputs and provides the help in case any of the arguments is not provided.
 
 The code does verify if the SRCDIR exists and if it is a directory, it does also verify if the SRCDIR exists inside the DESTDIR or if any of the path is not a directory.
